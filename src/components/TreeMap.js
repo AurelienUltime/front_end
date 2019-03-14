@@ -69,7 +69,6 @@ const data = [
   },
   {
     name: 'rrrrr',
-    img :'https://images-na.ssl-images-amazon.com/images/I/81aTawcGdmL._SL1500_.jpg',
     children: [
       {
         name: 'distortion',
@@ -141,7 +140,7 @@ const COLORS = ['#8889DD', '#9597E4', '#8DC77B', '#A5D297', '#E2CF45', '#F8C12D'
 class CustomizedContent extends Component {
   render() {
     const {
-      root, depth, x, y, width, height, index, payload, colors, rank, name,img,
+      root, depth, x, y, width, height, index, payload, colors, rank, name,
     } = this.props;
 
     return (
@@ -168,7 +167,7 @@ class CustomizedContent extends Component {
               fontSize={14}
             >
               {name}
-              {img}
+              
             </text>
           ) : null
         }

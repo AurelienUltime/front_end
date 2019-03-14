@@ -4,26 +4,42 @@ import './App.css';
 import { Button } from 'reactstrap';
 import Graph from './components/Graph';
 import TreeMap from './components/TreeMap';
+import {Container, Col, Row} from 'reactstrap';
+import GraphPie from './components/GraphPie';
+import CompareLine from './components/CompareLine';
+import Form from './components/Form/Form';
+
 class App extends Component {
   render() {
+
     return (
-      <div>
-        pppppppppppppp
-        <Button color="primary">primary</Button>{' '}
-        <Button color="secondary">secondary</Button>{' '}
-        <Button color="success">success</Button>{' '}
-        <Button color="info">info</Button>{' '}
-        <Button color="warning">warning</Button>{' '}
-        <Button color="danger">danger</Button>{' '}
-        <Button color="link">link</Button>
-          <div>
+
+      <Container className="Font">
+
+        <Row>
+          <Col>
+        <Button color="link" href="./Components/Formulaire.js">link</Button>
+        </Col>
+        </Row>
+         
+         <Row>
+           <Col sm='6'>
            <Graph/>
-          </div>
-          <div>
-            <TreeMap/>
-          </div>
-        
-      </div>
+           </Col>
+            <Col sm='6'>
+            <GraphPie/>
+            </Col>
+          </Row>
+          <Row>
+          <Col sm='6'>
+           <Form/>
+            </Col>
+            <Col sm='6'>
+            <CompareLine/>
+            </Col>
+            </Row>
+      </Container>
+      
     );
   }
 }
