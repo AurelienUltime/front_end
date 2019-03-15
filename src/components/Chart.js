@@ -10,15 +10,16 @@ class Chart extends Component {
         super(props);
         this.state = { 
             chartData:{
-                labels:['60s','70s', '80s', '90s'],
+                labels:['Thriller','Dark Side of the Moon', 'The Bodyguard B.O.', 'Bat Out of Hell'],
                 datasets:[
                 {
-                    label:'Decades',
+                    label:'nombre de ventes en millions',
                     data:[
-                        301,
-                        601,
-                        250,
-                        580
+                        65,
+                        44,
+                        45,
+                        43,
+                        0,
                     ],
                     backgroundColor:[
                         '#FF6384',
@@ -33,7 +34,7 @@ class Chart extends Component {
 
     render (){
         return (
-            <div className="chart">
+            <div className="Chart">
     <Bar
 	    data={this.state.chartData}
 

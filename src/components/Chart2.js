@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 //ici c le graph qu'on va utiliser
 import {Doughnut} from 'react-chartjs-2';
 
+import './Chart.css';
+
 class Chart2 extends Component {
 
     constructor(props){
@@ -20,10 +22,10 @@ class Chart2 extends Component {
                         580
                     ],
                     backgroundColor:[
-                        '#FF6384',
-                        '#36A2EB',
-                        '#FFCE56',
-                        'green',
+                    '#FF6384',
+                    '#36A2EB',
+                    '#FFCE56',
+                    'green',
           
                     ]
                 }]
@@ -33,16 +35,11 @@ class Chart2 extends Component {
 
     render (){
         return (
-            <div className="chart2">
-    <Doughnut
-	    data={this.state.chartData}
-
-	    options={{
-		    maintainAspectRatio: false
-	            }}
-    />
-            </div>
-        )
+            <div>
+                <h3 className="Titre">Evolution des couleurs de cover</h3>
+    <Doughnut data={this.state.chartData}/>
+    <br/> <br/> </div> 
+        );
     }
 }
 

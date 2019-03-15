@@ -1,45 +1,39 @@
-import React, {Component} from 'react';
+import React, { PureComponent } from 'react';
+import {
+  ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
 
-//ici c le graph qu'on va utiliser
-import {Radar} from 'react-chartjs-2';
+const data01 = [
+  { x: 15, y: 40.3}, { x: 40, y: 3.4},
+  { x: 20, y:24.8}, { x: 60, y: 0.3},
+  { x: 25, y: 4.6}, 
+];
+const data02 = [
+  { x: 15, y: 3.9}, { x: 40, y: 2.6},
+  { x: 20, y: 11.6}, { x: 60, y: 0.1},
+  { x: 25, y: 9.3},
+];
 
-class Chart3 extends Component {
+export default class Chart3 extends PureComponent {
+  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/3mw50Lc9/';
 
-    constructor(props){
-        super(props);
-        this.state = { 
-            chartData:{
-                labels:['60s','70s', '80s', '90s'],
-                datasets:[
-                {
-                    label:'Affluence de ventes 70s',
-                    data:[
-                        301,
-                        601,
-                        250,
-                        580
-                    ],
-                    backgroundColor:[
-                        "#8884d8"
-                    ]
-                }]
-            }
-        }
-    }
-
-    render (){
-        return (
-            <div className="chart3">
-    <Radar
-	    data={this.state.chartData}
-
-	    options={{
-		    maintainAspectRatio: false
-	            }}
-    />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <ScatterChart
+        width={400}
+        height={400}
+        margin={{
+          top: 20, right: 20, bottom: 20, left: 20,
+        }}
+      >
+        <CartesianGrid />
+        <XAxis type="number" dataKey="x" name="âge moyen" unit="ans" />
+        <YAxis type="number" dataKey="y" name="%" unit="%" />
+        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+        <Legend />
+        <Scatter name="Pop music" data={data01} fill='#FF6384' shape="star" />
+        <Scatter name="Jazz" data={data02} fill="#82ca9d" shape="triangle" />
+      </ScatterChart>
+    );
+  }
 }
-
-export default Chart3;

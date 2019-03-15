@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 //import LineChart from 'react-chartjs-2';
 import { Line } from 'react-chartjs-2';
 
+import './Chart.css';
+
 class Graph extends Component{
 
     render() {
@@ -9,7 +11,7 @@ class Graph extends Component{
           labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
           datasets: [
             {
-              label: 'My First dataset',
+              label: 'EVOLUTION DES VENTES DE THRILLER EN 1983',
               fill: false,
               lineTension: 0.1,
               backgroundColor: 'rgba(75,192,192,0.4)',
@@ -27,13 +29,12 @@ class Graph extends Component{
               pointHoverBorderWidth: 2,
               pointRadius: 1,
               pointHitRadius: 10,
-              data: [65, 59, 80, 81, 56, 55, 40]
+              data: [65, 59, 70, 30, 43, 75, 79]
             }
           ]
         };
         return (
           <div>
-            <h2>Line Example</h2>
             <Line data={data} />
           </div>
         );

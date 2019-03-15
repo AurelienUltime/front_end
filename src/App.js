@@ -12,68 +12,65 @@ import CompareLine from './components/CompareLine';
 import Graph from './components/Graph';
 import GraphPie from './components/GraphPie';
 
+import Form from './components/form/Form';
+
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 function Formulaire() {
-  return <h2>Formulaire</h2>;
+  return <Form/>;
 }
 
-function Dashboard({ routes }) {
+function Dashboard() {
   return (
-    <div>
-      <h2>Dashboard</h2>
-    //faut le rendre plus responsive
-  <Row className="Font">
+    <div className="Font">
+      <h1 className="App">Dashboard de la Zicmu</h1> <br></br>
+  <Row>
+  <dl/>
+        <br></br>
         <Col xl="6">
           <Chart/>
         </Col>
 
         <dl/>
+        <br></br>
 
         <Col xl="6">
           <Chart2/>
         </Col>
 
         <dl/>
+        <br></br>
 
         <Col xl="6">
           <Chart3/>
         </Col>
 
         <dl/>
+        <br></br>
 
         <Col xl="6">
           <CompareLine/>
         </Col>
 
         <dl/>
+        <br></br>
 
         <Col xl="6">
           <Graph/>
         </Col>
 
         <dl/>
+        <br></br>
 
         <Col xl="6">
           <GraphPie/>
         </Col>
 
         <dl/>
+        <br></br>
   </Row>
-
-      {routes.map((route, i) => (
-        <RouteWithSubRoutes key={i} {...route} />
-      ))}
     </div>
   );
-}
-
-function Bus() {
-  return <h3>Bus</h3>;
-}
-
-function Cart() {
-  return <h3>Cart</h3>;
 }
 
 ////////////////////////////////////////////////////////////
@@ -86,16 +83,6 @@ const routes = [
   {
     path: "/dashboard",
     component: Dashboard,
-    routes: [
-      {
-        path: "/tacos/bus",
-        component: Bus
-      },
-      {
-        path: "/tacos/cart",
-        component: Cart
-      }
-    ]
   }
 ];
 
@@ -114,22 +101,26 @@ function RouteWithSubRoutes(route) {
 }
 
 
-
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div>
+        <header className="Font">
   <Router>
   <div>
-        <ul>
-          <li>
-            <Link to="/dashboard">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/formulaire">Ajout musical</Link>
-          </li>
-        </ul>
+      <ul>
+      
+      <h4>
+        <br/>
+            <Link to="/dashboard"> <div className="Select">Dashboard</div></Link>
+      </h4>
+
+
+      <h4>
+            <Link to="/formulaire"><div className="Select">Ajout Musical</div></Link>
+      </h4>
+  
+      </ul>
 
         {routes.map((route, i) => (
           <RouteWithSubRoutes key={i} {...route} />

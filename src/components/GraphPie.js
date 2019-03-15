@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Pie} from 'react-chartjs-2';
 
+import './Chart.css';
+
 
 class GraphPie extends Component{
   
@@ -28,7 +30,7 @@ class GraphPie extends Component{
     };
     return (
       <div>
-        <h2>Pie Example</h2>
+        <h3 className="Titre">Pie Example</h3>
         <Pie data={data} />
       </div>
     );
