@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
 import {Button, Container, Row, Col} from 'reactstrap';
-
 import Chart from './components/Chart';
 import Chart2 from './components/Chart2';
 import Chart3 from './components/Chart3';
-
 import CompareLine from './components/CompareLine';
 import Graph from './components/Graph';
 import GraphPie from './components/GraphPie';
+import Gallery from './components/Gallery';
 
 import Form from './components/form/Form';
 
@@ -22,54 +19,44 @@ function Formulaire() {
 
 function Dashboard() {
   return (
+    <Container>
     <div className="Font">
-      <h1 className="App">Dashboard de la Zicmu</h1> <br></br>
+      <h1 className="App">Dashboard de la Zicmu</h1> 
+      <br/>
+      
   <Row>
-  <dl/>
-        <br></br>
-        <Col xl="6">
-          <Chart/>
+     
+        <Col>
+          <Gallery/>
         </Col>
-
-        <dl/>
-        <br></br>
 
         <Col xl="6">
           <Chart2/>
         </Col>
-
-        <dl/>
-        <br></br>
-
-        <Col xl="6">
+  </Row>
+  <Row>
+     
+        <Col sm="6">
           <Chart3/>
         </Col>
 
-        <dl/>
-        <br></br>
-
-        <Col xl="6">
+        <Col sm="6">
           <CompareLine/>
         </Col>
-
-        <dl/>
-        <br></br>
-
-        <Col xl="6">
+</Row>
+<Row>
+    
+        <Col sm="6">
           <Graph/>
         </Col>
-
-        <dl/>
-        <br></br>
-
-        <Col xl="6">
+        <Col sm="6">
           <GraphPie/>
         </Col>
-
-        <dl/>
-        <br></br>
+   
   </Row>
+ 
     </div>
+    </Container>
   );
 }
 
@@ -104,7 +91,7 @@ function RouteWithSubRoutes(route) {
 class App extends Component {
   render() {
     return (
-      <div>
+      
         <header className="Font">
   <Router>
   <div>
@@ -128,7 +115,7 @@ class App extends Component {
   </div>
   </Router>
         </header>
-      </div>
+      
 
     );
   }
