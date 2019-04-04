@@ -90,6 +90,8 @@ const data02 = [
   { name: 'Group E', value: 3908 }, { name: 'Group F', value: 4800 },
 ];
 */
+
+
 export default class PieChartNouv extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/k9jkog04/';
 
