@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Button, Container, Row, Col} from 'reactstrap';
-import Chart from './components/Chart';
-import Chart2 from './components/Chart2';
+
 import Chart3 from './components/Chart3';
 import CompareLine from './components/CompareLine';
 import Graph from './components/Graph';
 import GraphPie from './components/GraphPie';
 import Gallery from './components/Gallery';
+import BarChart2 from './components/BarChart';
 
 import Form from './components/form/Form';
 import PieChartNouv from './components/PieChartNouv';
@@ -52,7 +52,7 @@ function Dashboard() {
           <Graph/>
         </Col>
         <Col sm="6">
-          <GraphPie/>
+         <BarChart2/>
         </Col>
    
   </Row>

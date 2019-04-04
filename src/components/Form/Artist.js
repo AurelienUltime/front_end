@@ -1,41 +1,59 @@
 import React, { Component } from 'react';
-
+import _ from 'lodash';
+import Axios from 'axios';
 
 class Formulaire extends React.Component {
-    constructor(props) {
+  /*  constructor(props) {
       super(props);
-      this.state = {value: ''};
-      this.state = {value2: ''};
-  
+      
       this.handleChange = this.handleChange.bind(this);
+      this.handleChange3= this.handleChange3.bind(this);
+      this.handleChange2 =this.handleChange2.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
-    // Gérer tous les paramètres du conteneur Artiste
-    handleChange(event) {
-      this.setState({sub: event.target.sub});
-     // this.setState({value2:event.target.value2});
+  */
+    state = {
+      name:'',
+      birth:'',
+      followers:''
+  }
+  handleChange = event => {
+      this.setState({ name: event.target.value,});
+  }
+  handleChange2 = event => {
+    this.setState({ birth: event.target.value});
+}
+handleChange3 = event => {
+  this.setState({  followers: event.target.value});
+}
 
-    }
-   
-    handleSubmit(event) {
-      alert('Vous avez ajouter un élément dans votre DashBoard' + this.state.value);
+  handleSubmit = event => {
       event.preventDefault();
-    }
   
+      const artist = {
+        name: this.state.name,
+        birth: this.state.birth,
+        followers: this.state.followers
+      };
+  
+      Axios.put('http://localhost:3000/artists/', { artist })
+      
+    }
+    
     render() {
+      console.log("thiq.staet", this.state);
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
-            Widget 1
+            Ajout - Modif d'un Artiste 
         <p>Nom et prénom</p>
-        <input type="text" value={this.state.value} onChange={this.handleChange} />
+        <input type="text" name="name" onChange={this.handleChange}/>
         <p>Date de Naissance</p>
-        <input type="text" value2={this.state.value2} onChange={this.handleChange}/>
-        <p>Albums</p>
-        <input className="Albums" type="text" value3={this.state.value3} onChange={this.handleChange}/>
+        <input type="text" name="birth" onChange={this.handleChange2}/>
+        <p>Nombre de followers</p>
+        <input type="text" name="followers" onChange={this.handleChange3}/>
           </label>
-          <input type="submit" sub="Submit" />
+          <button type="submit">Ajouter</button>
         </form>
       );
     }
