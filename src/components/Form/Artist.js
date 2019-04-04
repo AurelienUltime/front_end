@@ -33,10 +33,18 @@ handleChange3 = event => {
       const artist = {
         name: this.state.name,
         birth: this.state.birth,
-        followers: this.state.followers
+        followers: this.state.followers,
+        album:this.state.album
       };
   
-      Axios.put('http://localhost:3000/artists/', { artist })
+      Axios.put('http://localhost:3000/artists/', {
+        name: this.state.name,
+        birth: this.state.birth,
+        followers: this.state.followers,
+        album:this.state.album
+      })
+
+
       
     }
     
