@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import axios from 'axios';
 
 //graph de type bar
 import {Bar} from 'react-chartjs-2';

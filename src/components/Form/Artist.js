@@ -28,14 +28,12 @@ class Formulaire extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Widget 1
-        <p>Nom</p>
+        <p>Nom et prénom</p>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <p>Prénom</p> 
+        <p>Date de Naissance</p>
         <input type="text" value2={this.state.value2} onChange={this.handleChange}/>
-        <p>Anniversaire</p>
-        <input type="text" value3={this.state.value3} onChange={this.handleChange}/>
         <p>Albums</p>
-        <input className="Albums" type="text" value4={this.state.value4} onChange={this.handleChange}/>
+        <input className="Albums" type="text" value3={this.state.value3} onChange={this.handleChange}/>
           </label>
           <input type="submit" sub="Submit" />
         </form>

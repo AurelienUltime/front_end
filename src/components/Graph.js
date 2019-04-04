@@ -35,7 +35,7 @@ class Graph extends Component{
           <div>
             <h2>Line Example</h2>
 
-            <Line className="Conteneur" data={data} />
+            <Line data={data} />
           </div>
         );
       }

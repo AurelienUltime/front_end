@@ -10,6 +10,8 @@ import GraphPie from './components/GraphPie';
 import Gallery from './components/Gallery';
 
 import Form from './components/form/Form';
+import PieChartNouv from './components/PieChartNouv';
+
 
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
@@ -31,7 +33,7 @@ function Dashboard() {
         </Col>
 
         <Col xl="6">
-          <Chart2/>
+          <PieChartNouv/>
         </Col>
   </Row>
   <Row>
@@ -116,7 +118,6 @@ class App extends Component {
   </Router>
         </header>
       
-
     );
   }
 }
