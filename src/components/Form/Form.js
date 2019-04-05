@@ -15,7 +15,7 @@ class Form extends Component{
             <div className="affichage">
             <Album/>
             <Artiste/>
-            <ArtistDel/>
+          
             </div>
             </center>
         );

@@ -50,9 +50,12 @@ function Dashboard() {
     </Row>
     <Row>
         <Col sm="6" md ="6">
+        <h3><center>Nombre de followers Insta par artiste</center></h3>
           <BarChart2/>
         </Col>
+        
         <Col sm="6" md ="6">
+        <h3><center>Nombre de likes 5 plus gros succés</center></h3>
         <RadarPie2/>
         </Col>
     </Row>
