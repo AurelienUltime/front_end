@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import Axios from 'axios';
+import './Artist.css';
 
 class Formulaire extends React.Component {
   /*  constructor(props) {
@@ -30,13 +31,6 @@ handleChange3 = event => {
   handleSubmit = event => {
       event.preventDefault();
   
-      const artist = {
-        name: this.state.name,
-        birth: this.state.birth,
-        followers: this.state.followers,
-        album:this.state.album
-      };
-  
       Axios.put('http://localhost:3000/artists/', {
         name: this.state.name,
         birth: this.state.birth,
@@ -44,16 +38,10 @@ handleChange3 = event => {
         album:this.state.album
       })
 
-      Axios.post('http://localhost:3000/artists/',{
-        name: this.state.name,
-        birth: this.state.birth,
-        followers: this.state.followers,
-        album:this.state.album
       }
-      )}
     
     render() {
-      console.log("thiq.staet", this.state);
+     // console.log("thiq.staet", this.state);
       return (
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -65,7 +53,7 @@ handleChange3 = event => {
         <p>Nombre de followers</p>
         <input type="text" name="followers" onChange={this.handleChange3}/>
           </label>
-          <button type="submit">Ajouter</button>
+          <p><button class="btn" type="submit">Ajout</button></p>
         </form>
       );
     }

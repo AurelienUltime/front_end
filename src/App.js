@@ -8,6 +8,7 @@ import Graph from './components/Graph';
 import GraphPie from './components/GraphPie';
 import Gallery from './components/Gallery2';
 import BarChart2 from './components/BarChart';
+import RadarPie2 from './components/RadarPie';
 
 import Form from './components/form/Form';
 import PieChartNouv from './components/PieChartNouv';
@@ -15,14 +16,15 @@ import PieChartNouv from './components/PieChartNouv';
 
 import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
+
 function Formulaire() {
   return <Form/>;
 }
 
 function Dashboard() {
   return (
-    <Container>
-    <div className="Font">
+    <Container className="Font">
+    
       <h1 className="App">Dashboard de la Zicmu</h1> 
       <br/>
       
@@ -32,34 +34,31 @@ function Dashboard() {
           <Gallery/>
         </Col>
 
-        <Col xl="6">
+  </Row>
+  <br/><br/><br/><br/><br/>
+  <Row>
+     
+        <Col sm="6" md="6">
         <h2><center>Nos 5 sons référencés les plus écoutés du moment</center></h2>
           <PieChartNouv/>
         </Col>
-  </Row>
-  <Row>
-     
-        <Col sm="6">
-          <Chart3/>
-        </Col>
 
-        <Col sm="6">
+        <Col sm="6" md ="6">
         <h2><center>Ventes des albums de style Pop au fils des années</center></h2>
           <CompareLine/>
         </Col>
-</Row>
-<Row>
-    
-        <Col sm="6">
-          <Graph/>
+    </Row>
+    <Row>
+        <Col sm="6" md ="6">
+          <RadarPie2/>
         </Col>
-        <Col sm="6">
+        <Col sm="6" md ="6">
          <BarChart2/>
         </Col>
-   
-  </Row>
+    </Row>
  
-    </div>
+ 
+    
     </Container>
   );
 }

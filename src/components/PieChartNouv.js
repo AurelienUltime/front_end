@@ -48,7 +48,7 @@ export default class PieChartNouv extends PureComponent {
 }
   render() {
     return (
-      <PieChart width={600} height={600}>
+      <PieChart width={400} height={400}>
         <Pie dataKey="listenings" nameKey="title" isAnimationActive={false} data={this.state.tracksListenings} cx={200} cy={200} outerRadius={80} fill="#8884d8" label />
         
         <Tooltip />

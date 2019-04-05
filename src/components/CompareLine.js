@@ -23,7 +23,7 @@ export default class CompareLine extends PureComponent {
   render() {
     return (
      
-      <LineChart width={500} height={300} data={this.state.ventesParDates}>
+      <LineChart width={400} height={300} data={this.state.ventesParDates}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="release" padding={{ left: 30, right: 30 }} />
         <YAxis />
