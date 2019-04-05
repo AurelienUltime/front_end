@@ -3,6 +3,7 @@ import {Container, Col, Row} from 'reactstrap';
 import Artiste from './Artist';
 import Album from './Album';
 import './Form.css';
+import ArtistDel from './ArtistDel';
 
 
 class Form extends Component{
@@ -14,6 +15,7 @@ class Form extends Component{
             <div className="affichage">
             <Album/>
             <Artiste/>
+            <ArtistDel/>
             </div>
             </center>
         );

@@ -50,10 +50,10 @@ function Dashboard() {
     </Row>
     <Row>
         <Col sm="6" md ="6">
-          <RadarPie2/>
+          <BarChart2/>
         </Col>
         <Col sm="6" md ="6">
-         <BarChart2/>
+        <RadarPie2/>
         </Col>
     </Row>
  
