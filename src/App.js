@@ -6,7 +6,7 @@ import Chart3 from './components/Chart3';
 import CompareLine from './components/CompareLine';
 import Graph from './components/Graph';
 import GraphPie from './components/GraphPie';
-import Gallery from './components/Gallery';
+import Gallery from './components/Gallery2';
 import BarChart2 from './components/BarChart';
 
 import Form from './components/form/Form';
@@ -33,6 +33,7 @@ function Dashboard() {
         </Col>
 
         <Col xl="6">
+        <h2><center>Nos 5 sons référencés les plus écoutés du moment</center></h2>
           <PieChartNouv/>
         </Col>
   </Row>
@@ -43,6 +44,7 @@ function Dashboard() {
         </Col>
 
         <Col sm="6">
+        <h2><center>Ventes des albums de style Pop au fils des années</center></h2>
           <CompareLine/>
         </Col>
 </Row>

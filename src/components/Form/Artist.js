@@ -44,9 +44,13 @@ handleChange3 = event => {
         album:this.state.album
       })
 
-
-      
-    }
+      Axios.post('http://localhost:3000/artists/',{
+        name: this.state.name,
+        birth: this.state.birth,
+        followers: this.state.followers,
+        album:this.state.album
+      }
+      )}
     
     render() {
       console.log("thiq.staet", this.state);
